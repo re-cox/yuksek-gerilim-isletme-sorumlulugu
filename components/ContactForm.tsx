@@ -15,16 +15,46 @@ const ContactForm: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate API call
-    console.log('Form Data Submitted:', formData);
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', company: '', phone: '', email: '', message: '' });
-      setTimeout(() => setStatus(''), 3000);
-    }, 1500);
+
+    // !!! DEĞİŞTİRİLMESİ GEREKEN ALAN !!!
+    // Formspree.io'dan aldığınız form ID'nizi buraya yapıştırın.
+    // Örneğin: 'mgegygqv'
+    const FORMSPREE_FORM_ID = 'YOUR_FORM_ID';
+
+    if (FORMSPREE_FORM_ID === 'YOUR_FORM_ID') {
+        console.error("Lütfen ContactForm.tsx dosyasındaki FORMSPREE_FORM_ID'yi güncelleyin.");
+        setStatus('error');
+        // Kullanıcıya yönelik bir uyarı da eklenebilir.
+        setTimeout(() => setStatus(''), 5000);
+        return;
+    }
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setFormData({ name: '', company: '', phone: '', email: '', message: '' });
+        setTimeout(() => setStatus(''), 5000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus(''), 5000);
+      }
+    } catch (error) {
+      console.error('Form gönderilirken bir hata oluştu:', error);
+      setStatus('error');
+      setTimeout(() => setStatus(''), 5000);
+    }
   };
 
   return (
@@ -70,6 +100,9 @@ const ContactForm: React.FC = () => {
           </form>
           {status === 'success' && (
             <p className="mt-4 text-center text-green-400">Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.</p>
+          )}
+          {status === 'error' && (
+             <p className="mt-4 text-center text-red-400">Bir hata oluştu. Lütfen daha sonra tekrar deneyin veya doğrudan bize ulaşın.</p>
           )}
         </div>
 
