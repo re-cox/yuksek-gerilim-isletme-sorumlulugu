@@ -55,7 +55,7 @@ const WhyUs: React.FC = () => {
                         </div>
                     </div>
                     <div className="mt-10 lg:mt-0 relative" aria-hidden="true">
-                        <img className="rounded-lg shadow-xl object-cover w-full h-full" src="https://picsum.photos/seed/engineer/600/800" alt="Mühendis" />
+                        <img className="rounded-lg shadow-xl object-cover w-full h-full" src="https://i.ibb.co/XhKc9Rn/Electrical-Services.png" alt="Mühendis" />
                     </div>
                 </div>
             </div>
