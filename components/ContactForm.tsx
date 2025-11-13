@@ -22,9 +22,9 @@ const ContactForm: React.FC = () => {
     // !!! DEĞİŞTİRİLMESİ GEREKEN ALAN !!!
     // Formspree.io'dan aldığınız form ID'nizi buraya yapıştırın.
     // Örneğin: 'mgegygqv'
-    const FORMSPREE_FORM_ID = 'YOUR_FORM_ID';
+    const FORMSPREE_FORM_ID = 'xjkjkavn';
 
-    if (FORMSPREE_FORM_ID === 'YOUR_FORM_ID') {
+    if (FORMSPREE_FORM_ID === 'xjkjkavn') {
         console.error("Lütfen ContactForm.tsx dosyasındaki FORMSPREE_FORM_ID'yi güncelleyin.");
         setStatus('error');
         // Kullanıcıya yönelik bir uyarı da eklenebilir.
@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
     }
 
     try {
-      const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+      const response = await fetch(`https://formspree.io/f/${xjkjkavn}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
