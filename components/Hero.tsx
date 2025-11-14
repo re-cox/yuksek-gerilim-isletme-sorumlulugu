@@ -4,7 +4,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative bg-gray-800 pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center text-center text-white overflow-hidden">
       <img
-        src="https://picsum.photos/seed/powerplant/1920/1080"
+        src="https://picsum.photos/seed/powerplant/1920/1080.webp"
         alt="Yüksek gerilim hatları ve bir enerji santrali"
         className="absolute inset-0 w-full h-full object-cover opacity-20"
         // @ts-ignore - fetchPriority is not in standard React DOM types yet
