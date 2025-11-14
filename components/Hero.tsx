@@ -1,13 +1,17 @@
-
 import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative bg-gray-800 pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center text-center text-white">
-      <div 
-        className="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-20" 
-        style={{backgroundImage: "url('https://picsum.photos/seed/powerplant/1920/1080')"}}
-      ></div>
+    <section className="relative bg-gray-800 pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center text-center text-white overflow-hidden">
+      <img
+        src="https://picsum.photos/seed/powerplant/1920/1080"
+        alt="Yüksek gerilim hatları ve bir enerji santrali"
+        className="absolute inset-0 w-full h-full object-cover opacity-20"
+        // @ts-ignore - fetchPriority is not in standard React DOM types yet
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+      />
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
           İstanbul'da Yüksek Gerilim Tesisleriniz <span className="text-yellow-400">Emin Ellerde</span>
