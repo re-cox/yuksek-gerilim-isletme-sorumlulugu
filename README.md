@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<title>YG Sorumluluk - Yüksek Gerilim İşletme Sorumluluğu</title>
-<style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 900px; margin: auto; }
-    h1, h2, h3 { color: #333; }
-    ul { margin-left: 20px; }
-    code { background: #eee; padding: 3px 5px; border-radius: 4px; }
-</style>
-</head>
-<body>
-
 <h1>⚡ YG Sorumluluk – Yüksek Gerilim İşletme Sorumluluğu Hizmeti</h1>
 
 <p>
