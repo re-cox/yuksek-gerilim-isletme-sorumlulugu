@@ -1,14 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="İstanbul genelinde yüksek gerilim tesisleri için profesyonel ve yasalara uygun işletme sorumluluğu hizmeti sunan, modern ve kullanıcı dostu bir web uygulaması. Potansiyel müşterilere hizmet hakkında detaylı bilgi sunar ve kolayca teklif almalarını sağlar." />
     <title>YG İşletme Sorumluluğu | İstanbul</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Preconnect to required origins for fonts and images -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://picsum.photos">
+
+    <!-- Preload LCP image with high priority -->
+    <link rel="preload" as="image" href="https://picsum.photos/seed/powerplant/1920/1080" fetchpriority="high">
+    
+    <!-- Preload key font file to reduce CLS -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Asynchronously load Google Fonts CSS to prevent render blocking -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
+    
+    <!-- Defer TailwindCSS script to prevent render blocking -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -24,7 +39,6 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
